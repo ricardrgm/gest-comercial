@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { CustomerRoutingModule } from './customer-routing.module';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerDataComponent } from './customer-data/customer-data.component';
+import { CustomerComponent } from './customer/customer.component';
 
 
 @NgModule({
   declarations: [
     CustomerListComponent,
-    CustomerDataComponent
+    CustomerDataComponent,
+    CustomerComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { CustomerDataComponent } from './customer-data/customer-data.component';
   ],
   exports: [
     CustomerListComponent,
-    CustomerDataComponent
+    CustomerDataComponent,
+    CustomerComponent
   ]
 })
 export class CustomerModule { }

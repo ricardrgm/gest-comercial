@@ -16,8 +16,7 @@ import { SupplierRequestComponent } from './supplier-request/supplier-request.co
     SupplierRoutingModule
   ],
   exports: [
-    SuppliersListComponent,
-    SupplierRequestComponent
+    
   ]
 })
 export class SupplierModule { }

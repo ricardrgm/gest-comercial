@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { NotfoundComponent } from './notfound/notfound.component';
   ],
   imports: [
     CommonModule,
-    CommonsRoutingModule
+    CommonsRoutingModule,
+    MatMenuModule,
+    MatButtonModule
   ],
   exports: [
     HeaderComponent,
