@@ -1,6 +1,8 @@
 <p>customer-list works!</p>
 
-<li><a routerLink="1">customer1</a></li>
-<li><a routerLink="2">customer2</a></li>
-<li><a routerLink="3">customer3</a></li>
+<mat-nav-list>
+  <mat-list-item *ngFor="let customer of typesOfCustomer">
+     <a matLine routerLink={{customer.route}}>{{customer.customer}}</a>
+  </mat-list-item>
+</mat-nav-list>
 

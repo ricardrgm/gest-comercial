@@ -1,1 +1,40 @@
 <p>storing-list works!</p>
+
+<ul>
+  <ng-container
+    *ngFor="
+      let product of storingProduct;
+      let isOdd = odd;
+      trackBy: productTrackerFunction
+    "
+  >
+    <ng-container *ngIf="isOdd; then odd; else even"> </ng-container>
+
+    <ng-template #odd>
+      <li [ngClass]="'odd'">
+        <ng-container *ngIf="product.category !== outOfStock; then stockIn; else stockOut">
+      </ng-container>
+      </li>
+    </ng-template>
+
+    <ng-template #even>
+      <li [ngClass]="'even'">
+        <ng-container *ngIf="product.category !== outOfStock; then stockIn; else stockOut">
+        </ng-container>
+      </li>
+    </ng-template>
+
+    <ng-template #stockIn>
+        <span> {{ product.name }} </span>
+        <span> {{ product.category }} </span>
+    </ng-template>
+
+    <ng-template #stockOut>
+      <span> {{ product.name }} </span>
+      <span> >> product out of stock </span>
+    </ng-template>
+
+  </ng-container>
+</ul>
+
+

@@ -4,8 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonsModule } from './commons/commons.module';
-import { CustomerModule } from './customer/customer.module';
-import { SupplierModule } from './supplier/supplier.module';
+
+// Estos import los gestiona ahora el app-routing.module
+// import { CustomerModule } from './customer/customer.module';
+// import { SupplierModule } from './supplier/supplier.module';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -19,8 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     CommonsModule,
-    CustomerModule,
-    SupplierModule,
+    // CustomerModule,
+    // SupplierModule,
     BrowserAnimationsModule
   ],
   providers: [],
